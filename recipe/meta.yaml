@@ -1,5 +1,5 @@
 {% set name = "lineapy" %}
-{% set version = "0.1.2" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lineapy-{{ version }}.tar.gz
-  sha256: dc24526bd3a9bc714473c957be7b429b0778e79f062e42be387bd4b67244d8aa
+  sha256: 74aeb9c06fac7e5d631c2b02211976ae0df66821c400a3ea9c0b1ea5bf49fee8
 
 build:
   entry_points:
