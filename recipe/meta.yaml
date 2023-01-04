@@ -1,5 +1,5 @@
 {% set name = "lineapy" %}
-{% set version = "0.1.4" %}
+{% set version = "0.1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lineapy-{{ version }}.tar.gz
-  sha256: d4cf90782426d3c69a114e70675dd88940d11f253966e7e377078cc7b13780d7
+  sha256: 59936429e18c811888f1473db521c59ad4cf666fa283e58db53ee990b093f945
 
 build:
   entry_points:
@@ -21,6 +21,7 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - alembic ==1.8.0
     - asttokens
     - black
     - click >=8.0.0
