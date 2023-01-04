@@ -21,21 +21,24 @@ requirements:
     - pip
     - python >=3.7
   run:
+    - alembic ==1.8.0
     - asttokens
     - black
     - click >=8.0.0
+    - fsspec
     - ipython >=7.0.0
     - isort
     - jinja2
     - nbconvert <7.0.0
     - nbformat
     - networkx
+    - pandas
     - pydantic
     - python >=3.7
     - pyyaml
     - requests
     - rich
-    - sqlalchemy
+    - sqlalchemy >=1.4
 
 test:
   imports:
