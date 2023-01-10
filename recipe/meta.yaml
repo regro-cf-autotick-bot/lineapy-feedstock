@@ -1,5 +1,5 @@
 {% set name = "lineapy" %}
-{% set version = "0.2.0" %}
+{% set version = "0.2.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lineapy-{{ version }}.tar.gz
-  sha256: 74aeb9c06fac7e5d631c2b02211976ae0df66821c400a3ea9c0b1ea5bf49fee8
+  sha256: 68a872cc8956ceb4507d250a055a78632617f8708a9c8403b032190a744af45a
 
 build:
   entry_points:
@@ -22,9 +22,9 @@ requirements:
     - python >=3.7
   run:
     - alembic ==1.8.0
-    - asttokens
     - black
     - click >=8.0.0
+    - cloudpickle
     - fsspec
     - ipython >=7.0.0
     - isort
@@ -38,7 +38,7 @@ requirements:
     - pyyaml
     - requests
     - rich
-    - sqlalchemy >=1.4
+    - sqlalchemy >=1.4,<2.0.0
 
 test:
   imports:
