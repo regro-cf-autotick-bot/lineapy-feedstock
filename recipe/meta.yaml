@@ -22,9 +22,9 @@ requirements:
     - python >=3.7
   run:
     - alembic ==1.8.0
-    - asttokens
     - black
     - click >=8.0.0
+    - cloudpickle
     - fsspec
     - ipython >=7.0.0
     - isort
@@ -38,7 +38,7 @@ requirements:
     - pyyaml
     - requests
     - rich
-    - sqlalchemy >=1.4
+    - sqlalchemy >=1.4,<2.0.0
 
 test:
   imports:
