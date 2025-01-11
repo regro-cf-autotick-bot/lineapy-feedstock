@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/lineapy-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/lineapy-{{ version }}.tar.gz
   sha256: 68a872cc8956ceb4507d250a055a78632617f8708a9c8403b032190a744af45a
 
 build:
@@ -14,12 +14,12 @@ build:
     - lineapy=lineapy.cli.cli:linea_cli
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
   run:
     - alembic ==1.8.0
     - black
@@ -34,7 +34,7 @@ requirements:
     - networkx
     - pandas
     - pydantic
-    - python >=3.7
+    - python >={{ python_min }}
     - pyyaml
     - requests
     - rich
@@ -48,6 +48,7 @@ test:
     - lineapy --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/LineaLabs/lineapy/
